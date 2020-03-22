@@ -43,6 +43,6 @@ app.delete('/usuario', function (req, res) {
   res.json('Delete usuario');
 });
  
-app.listen(process.env.POST, () => {
+app.listen(process.env.PORT, () => {
     console.log('Escuchando puerto',process.env.PORT);
 });
