@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 app.use(require('./routes/usuario'));
 
-mongoose.connect(process.env.URLDB, {useNewUrlParser: true}, (err, res) => {
+mongoose.connect(process.env.URLDB, (err, res) => {
 
     if ( err ) throw err;
 
