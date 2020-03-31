@@ -19,7 +19,7 @@ app.use(express.static(path.resolve(__dirname,'../public')));
 app.use(require('./routes/index'));
 
 
-mongoose.connect(process.env.URLDB, {useUnifiedTopology: true, useNewUrlParser: true}, (err, res) => {
+mongoose.connect(process.env.URLDB, {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true}, (err, res) => {
 
     if ( err ) throw err;
 
