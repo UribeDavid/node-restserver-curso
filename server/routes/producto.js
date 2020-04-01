@@ -111,6 +111,7 @@ app.post('/producto', verificaToken, (req, res) => {
         nombre: body.nombre,
         precioUnidad: body.precioUnidad,
         descripcion: body.descripcion,
+        img: body.img,
         usuario: req.usuario._id,
         categoria: body.categoria
     });
@@ -134,7 +135,7 @@ app.post('/producto', verificaToken, (req, res) => {
 //
 app.put('/producto/:id', verificaToken, (req, res) => {
 
-        let body = _.pick(req.body, ['nombre','precioUnidad','descripcion','categoria', 'disponible']);
+        let body = _.pick(req.body, ['nombre','precioUnidad','descripcion','img','categoria', 'disponible']);
 
         let id = req.params.id;
 
